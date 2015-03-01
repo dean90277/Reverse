@@ -1,31 +1,31 @@
 #!/bin/usr/python
 
-Complimentary = {'a':'t', 't':'a', 'c':'g', 'g':'c', 'A':'t', 'T':'a', 'C':'g', 'G':'c'}
-Continue = True
+complementary = {'a':'t', 't':'a', 'c':'g', 'g':'c', 'A':'t', 'T':'a', 'C':'g', 'G':'c'}
+keeprunning = True
 
-while (Continue == True):
+while (keeprunning == True):
 
-	Seq_output = ""
-	Seq_input = raw_input("Please input a sequence: ")
+	seq_output = ""
+	seq_input = input("Please input a sequence: ")
 
-	for base in Seq_input:
-		if (base in Complimentary): Seq_output = Complimentary[base] + Seq_output
+	for base in seq_input:
+		if (base in complementary): seq_output = complementary[base] + seq_output
 		
-	if (len(Seq_output) == len(Seq_input)):			#Any invalid input will result in different lengths
-		print "Input Sequence = " + Seq_input
-		print "Reversed Complimentary Sequence = " + Seq_output
-		if (raw_input("Do you want to continue? (y:yes, others:no) ") == 'y'):
-			Continue = True
+	if (len(seq_output) == len(seq_input)):			#Any invalid input will result in different lengths
+		print ("Input Sequence = " + seq_input)
+		print ("Reversed Complementary Sequence = " + seq_output)
+		if (input("Do you want to continue? (y:yes, others:no) ") == 'y'):
+			keeprunning = True
 		else: 
-			Continue = False
+			keeprunning = False
 	else:
-		if (raw_input("please input a valid sequence. Do you want to continue? (y:yes, others:no) ") == 'y'):
-			Continue = True
+		if (input("please input a valid sequence. Do you want to continue? (y:yes, others:no) ") == 'y'):
+			keeprunning = True
 		else: 
-			Continue = False
+			keeprunning = False
 
 
-print "Thank you for using this program. Good bye."
+print ("Thank you for using this program. Good bye.")
 
 
 
